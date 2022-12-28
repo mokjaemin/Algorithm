@@ -10,3 +10,8 @@ print(5%3)
 n = "3"
 if(n in "33"):
     print("yes")
+
+# 영어 문자열의 아스키 코드 상 순서 받기
+# 예를들어, a-1, b-2
+column = int(ord("a") - int(ord('a'))) + 1
+print(column)
