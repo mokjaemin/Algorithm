@@ -1,4 +1,4 @@
-
+# 기본 문법 정리
 
 # 나눗셈 관련
 print(5//3)
@@ -15,3 +15,8 @@ if(n in "33"):
 # 예를들어, a-1, b-2
 column = int(ord("a") - int(ord('a'))) + 1
 print(column)
+
+# 리스트를 넘파이로
+import numpy as np
+list = []
+list = np.array(list)
