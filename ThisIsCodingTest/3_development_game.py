@@ -11,80 +11,68 @@
 # 1단계로 돌아간다. 단, 이때 뒤쪽 방향이 바다인 칸이라 뒤로 갈 수 없는 경우에는 움직임을 멈춘다.
 # 결론
 # 캐릭터가 이동을 마친 후 방문한 칸의 수를 출력하는 프로그램
+# 북, 동, 남, 서 (0, 1, 2, 3)
 
-import numpy as np
+# golbal 변수 만드는 아이디어
+# 방향 만들기
+# 헷갈리는 논리를 깔끔하게 정리하고 로직 구성하는게 중요할 듯
 
-map_input = input("입력 : ").split(" ")
-pos_input = input("입력 : ").split(" ")
 
-map_x = int(map_input[0])
-map_y = int(map_input[1])
+# 답안
+n, m = map(int, input("입력 : ").split()) # 맵 크기 입력
+d = [[0]*m for _ in range(n)] # 가본 맵 만들기
 
-pos_x = int(pos_input[0])
-pos_y = int(pos_input[1])
-pos_d = int(pos_input[2])
+x, y, direction = map(int, input("입력 : ").split()) # 캐릭터의 위치, 방향
+d[x][y] = 1 # 초기 위치 방문 설정
 
-map = []
+array = []
+for i in range(n):
+    array.append(list(map(int, input("입력 : ").split()))) # 전체 맵 설정
 
-for i in range(0, map_x):
-    map.append(input("입력 : ").split(" "))
-map = np.array(map)
-route = []
-path = 1
+dx = [-1, 0, 1, 0] # 북, 동, 남, 서
+dy = [0, 1, 0, -1]
 
-# 북 - 0, 서 - 3, 남 - 2, 동 - 1 
+# 왼쪽으로 회전
+def turn_left():
+    global direction
+    direction -= 1
+    if direction == -1:
+        direction = 3
+
+
+# 시뮬레이션 시작
+count = 1 # 이미 한번 밟았으니
+turn_time = 0
+
 while(1):
-    for i in range(0, 4):
-        if(pos_d == 0):
-            pos_d = 3
-            if(map[pos_x, pos_y-1] == "1"):
-                route.append("x")
-            elif(map[pos_x, pos_y-1] == "0"):
-                route.append("o")
-                map[pos_x, pos_y] = 2
-                pos_y = pos_y - 1
-                path += 1
-            elif(map[pos_x, pos_y-1] == "2"):
-                route.append("x")
-
-        elif(pos_d == 1):
-            pos_d = 0
-            if(map[pos_x-1, pos_y] == "1"):
-                route.append("x")
-            elif(map[pos_x-1, pos_y] == "0"):
-                route.append("o")
-                map[pos_x, pos_y] = 2
-                pos_x = pos_x - 1
-                path += 1
-            elif(map[pos_x-1, pos_y] == "2"):
-                route.append("x")
-
-        elif(pos_d == 2):
-            pos_d = 1
-            if(map[pos_x, pos_y+1] == "1"):
-                route.append("x")
-            elif(map[pos_x, pos_y+1] == "0"):
-                route.append("o")
-                map[pos_x, pos_y] = 2
-                pos_y = pos_y + 1
-                path += 1
-            elif(map[pos_x, pos_y+1] == "2"):
-                route.append("x")
-
-        elif(pos_d == 3):
-            pos_d = 2
-            if(map[pos_x+1, pos_y] == "1"):
-                route.append("x")
-            elif(map[pos_x+1, pos_y] == "0"):
-                route.append("o")
-                map[pos_x, pos_y] = 2
-                pos_x = pos_x + 1
-                path += 1
-            elif(map[pos_x+1, pos_y] == "2"):
-                route.append("x")
-    if(len(route) == 4):
-        if(route == ["x", "x", "x", "x"]):
-            print(path)
-            break
+    turn_left()
+    nx = x + dx[direction]
+    ny = y + dy[direction]
+    if d[nx][ny] == 0 and array[nx][ny] == 0:
+        d[nx][ny] = 1
+        x = nx
+        y = ny
+        count += 1
+        turn_time = 0
+        continue
+    else:
+        turn_time += 1
+    
+    # 네 방향 모두 갈 수 없는 경우
+    if turn_time == 4:
+        print('x')
+        nx = x - dx[direction]
+        nx = y - dy[direction]
+        # 뒤로 갈 수 있다면 이동하기
+        if array[nx][ny] == 0:
+            x = nx
+            y = ny
         else:
-            route = []
+            break
+        turn_time = 0
+
+print(count)
+
+
+
+

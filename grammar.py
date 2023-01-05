@@ -20,3 +20,6 @@ print(column)
 import numpy as np
 list = []
 list = np.array(list)
+
+# 맵 만들기
+d = [[0]*m for _ in range(n)]
