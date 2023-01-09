@@ -25,3 +25,21 @@ list = np.array(list)
 m = 5 # 행
 n = 4 # 열
 d = [[0]*m for _ in range(n)]
+
+# 6. 마지막 원소부터 출력 
+stack = []
+print(stack[::-1])
+
+# 7. 띄워쓰기 마지막에 추가
+print(1, end=" ")
+
+# 8. not 사용
+if not True: # ! 대신 사용하자.
+    print("a") 
+
+# 9. deque 사용
+from collections import deque
+start = 1
+quene = deque({start})
+quene.append()
+quene.popleft()
