@@ -43,3 +43,15 @@ start = 1
 quene = deque({start})
 quene.append()
 quene.popleft()
+
+
+# 10. 입력 받아 그래프 생성
+# 예를 들어, 그래프의 크기 입력받은 후 3333 입력받아 맵의 첫줄로 입력
+x, y = map(int, input("입력 : ").split())
+graph = []
+for i in range(x):
+    graph.append(list(map(int, input("입력 : "))))
+# graph.append(list(map(int, input("입력 : ").split()))) 가능
+# 저번에 graph 대신 map이라는 이름을 사용했는데 함수랑 헷갈려함.
+# 따라서 map 쓰지 말자.
+# 입력시 list로 입력해야 함.
