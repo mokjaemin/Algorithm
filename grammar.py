@@ -43,6 +43,11 @@ start = 1
 quene = deque({start})
 quene.append()
 quene.popleft()
+# quene이 빌때까지
+while(quene):
+    print("아직 있음")
+# 입력 받을때
+quene.append((1, 1)) # 1행 1열
 
 
 # 10. 입력 받아 그래프 생성
@@ -55,3 +60,12 @@ for i in range(x):
 # 저번에 graph 대신 map이라는 이름을 사용했는데 함수랑 헷갈려함.
 # 따라서 map 쓰지 말자.
 # 입력시 list로 입력해야 함.
+# split 쓸때 조심, 만약 split 쓰고 입력시 띄어쓰기로 안받으면 하나의 데이터가 되어버림
+
+
+# continue
+# for 안에 continue는 for문을 나감
+for i in range(4):
+    if(i == 1):
+        continue
+    print(i)

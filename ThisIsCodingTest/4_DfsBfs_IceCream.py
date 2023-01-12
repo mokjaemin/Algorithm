@@ -54,25 +54,65 @@
 
 
 # 다시 한번 작성해보기
-x, y = map(int, input("입력 : ").split(" "))
+# x, y = map(int, input("입력 : ").split(" "))
+# graph = []
+# for i in range(x):
+#     graph.append(list(map(int, input("입력 : "))))
+
+# def dfs(i, j):
+#     if(i>=0 and i<=x-1 and j>=0 and j<=y-1):
+#         if(graph[i][j] == 0):
+#             graph[i][j] = 1
+#             dfs(i+1, j)
+#             dfs(i-1, j)
+#             dfs(i, j+1)
+#             dfs(i, j-1)
+#             return 1
+#     return 0
+
+# result = []
+# for i in range(x):
+#     for j in range(y):
+#         result.append(dfs(i, j))
+#         print(result)
+
+
+# 코드 분석
+
+# 1. map의 구조 받기
+n, m = map(int, input("입력 : ").split(" "))
+
+# 2. map의 데이터 받기
 graph = []
-for i in range(x):
+for i in range(n):
     graph.append(list(map(int, input("입력 : "))))
 
+# 3. 문제 해결
+# 이용 - DFS
+# 특징 - 선입 후출, 깊이 우선 탐색(최대한 깊은 노드 우선으로 탐색)
+# 동작 - 최상단 스택의 인접노드 중 방문하지 않은 가장 인덱스가 낮은 인접노드부터 순서대로 방문 후 방문처리
+
+# 활용
+# 0 뭉텅이가 아이스크림 뭉텅이인데, 근처 인접 노드부터 스택에 넣어가며 방문처리
+# 방문처리는 1로 변경
 def dfs(i, j):
-    if(i>=0 and i<=x-1 and j>=0 and j<=y-1):
+    # 해당 범위를 넘어가면 return 처리 해버림
+    if(i>=0 and i<=n-1 and j>=0 and j<=m-1):
+        # 해당 그래프 값이 1이면 나가버림
         if(graph[i][j] == 0):
             graph[i][j] = 1
+            # 여기서 값이 모든 간에 결국 메인에서 return 되는 값은 1
             dfs(i+1, j)
             dfs(i-1, j)
             dfs(i, j+1)
             dfs(i, j-1)
-            return True
-    return False
+            return 1
+    return 0
 
-result = 0
-for i in range(x):
-    for j in range(y):
-        if dfs(i, j) == True:
-            result += 1
-print(result)
+result = []
+for i in range(n):
+    for j in range(m):
+        result.append(dfs(i, j))
+        print(result)
+
+
