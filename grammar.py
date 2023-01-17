@@ -69,3 +69,20 @@ for i in range(4):
     if(i == 1):
         continue
     print(i)
+
+
+# swap - 위치 바꾸기
+array = [3, 5]
+array[0], array[1] = array[1], array[0]
+
+
+# 마이너스 반복문
+for i in range(10, 0, -1):
+    print(i)
+
+
+# 정렬
+array = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
+array = sorted(array) # 오름 차순(점점 오름)
+array = sorted(array, reverse=True) # 내림 차순(점점 내려감)
+array.sort() # 리스트 객체의 내장 함수

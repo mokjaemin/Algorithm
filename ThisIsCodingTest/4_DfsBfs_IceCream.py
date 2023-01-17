@@ -100,6 +100,7 @@ def dfs(i, j):
     if(i>=0 and i<=n-1 and j>=0 and j<=m-1):
         # 해당 그래프 값이 1이면 나가버림
         if(graph[i][j] == 0):
+            # 1처리해서 방문처리
             graph[i][j] = 1
             # 여기서 값이 모든 간에 결국 메인에서 return 되는 값은 1
             dfs(i+1, j)
