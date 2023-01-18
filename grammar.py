@@ -86,3 +86,5 @@ array = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
 array = sorted(array) # 오름 차순(점점 오름)
 array = sorted(array, reverse=True) # 내림 차순(점점 내려감)
 array.sort() # 리스트 객체의 내장 함수
+data = sorted(array, key=lambda array:array[1], reverse=True) # 기준 정렬, 2차원일경우
+
