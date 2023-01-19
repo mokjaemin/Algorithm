@@ -1,7 +1,7 @@
 # 기본 문법 정리
 
 # 1. 나눗셈 관련
-print(5//3)
+print(5//3) # 소수점 버림
 print(5/3)
 print(5%3)
 
@@ -88,3 +88,17 @@ array = sorted(array, reverse=True) # 내림 차순(점점 내려감)
 array.sort() # 리스트 객체의 내장 함수
 data = sorted(array, key=lambda array:array[1], reverse=True) # 기준 정렬, 2차원일경우
 
+
+# 리스트 생성없이 그대로 입력
+array = input().split()
+
+
+# map(int, ) 와 int()의 차이
+# map은 두개이상의 데이터가 들어올시 바로 바꿔주고 int바로쓰면 오류
+
+
+# 입력데이터가 많은 경우
+# input() 대신에 사용
+import sys
+input_data = sys.stdin.readline().rstrip()
+print(input_data)

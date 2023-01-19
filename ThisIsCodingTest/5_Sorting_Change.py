@@ -26,7 +26,7 @@ b.sort(reverse=True)
 for i in range(k):
     if(a[i] < b[i]):
         a[i], b[i] = b[i], a[i]
-    else:
+    else: # for문 빠져나옴
         break
 print(sum(a))
 
