@@ -102,3 +102,20 @@ array = input().split()
 import sys
 input_data = sys.stdin.readline().rstrip()
 print(input_data)
+
+
+# 리스트로 바로바로 입력됨.
+input = sys.stdin.readline
+print(input().split())
+
+
+# 무한대
+INF = int(1e9)
+
+
+# 힙큐 사용
+import heapq
+q = []
+heapq.heappush(q, (1, 2))
+# while q: # 큐가 비어있을 때 까지
+    # dist, now = heapq.heappop(q) # 꺼냄
