@@ -59,13 +59,41 @@
 #         print(result)
 #         count = 0
     
+# import time
+# n, m, k = map(int, input("입력 : ").split())
+# array = list(map(int, input().split()))
+# start_time = time.time()
+# array.sort(reverse=True)
+# result = (m//(k+1)) * (array[0]*3 + array[1])
+# result += (m%(k+1)) * array[0]
+# print(result)
+# end_time = time.time()
+# print(end_time - start_time)
+
+
+
+# 실전문제 2. 숫자 카드 게임
+# n, m = map(int, input("입력 : ").split())
+# array = []
+# min_array = []
+# for i in range(n):
+#     array.append(list(map(int, input("입력 : ").split())))
+#     min_array.append(min(array[i]))
+# print(max(min_array))
+
+
+# 실전문제 3. 1이 될때 까지
 import time
-n, m, k = map(int, input("입력 : ").split())
-array = list(map(int, input().split()))
+n, k = map(int, input("입력 : ").split())
 start_time = time.time()
-array.sort(reverse=True)
-result = (m//(k+1)) * (array[0]*3 + array[1])
-result += (m%(k+1)) * array[0]
-print(result)
+count = 0
+while(n != 1):
+    if(n % k == 0):
+        n = n//k
+        count += 1
+    else:
+        n -= 1
+        count += 1
+print(count)
 end_time = time.time()
 print(end_time - start_time)
