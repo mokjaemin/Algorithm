@@ -119,3 +119,8 @@ q = []
 heapq.heappush(q, (1, 2))
 # while q: # 큐가 비어있을 때 까지
     # dist, now = heapq.heappop(q) # 꺼냄
+
+
+# str은 문자열 변경 접근 안됨
+# 리스트로 변경해서 진행
+a = list("1")
