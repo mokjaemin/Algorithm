@@ -63,7 +63,7 @@ for i in range(x):
 # split 쓸때 조심, 만약 split 쓰고 입력시 띄어쓰기로 안받으면 하나의 데이터가 되어버림
 
 
-# continue
+# 11. continue
 # for 안에 continue는 for문을 나감
 for i in range(4):
     if(i == 1):
@@ -71,17 +71,17 @@ for i in range(4):
     print(i)
 
 
-# swap - 위치 바꾸기
+# 12. swap - 위치 바꾸기
 array = [3, 5]
 array[0], array[1] = array[1], array[0]
 
 
-# 마이너스 반복문
+# 13. 마이너스 반복문
 for i in range(10, 0, -1):
     print(i)
 
 
-# 정렬
+# 14. 정렬
 array = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
 array = sorted(array) # 오름 차순(점점 오름)
 array = sorted(array, reverse=True) # 내림 차순(점점 내려감)
@@ -89,31 +89,31 @@ array.sort() # 리스트 객체의 내장 함수
 data = sorted(array, key=lambda array:array[1], reverse=True) # 기준 정렬, 2차원일경우
 
 
-# 리스트 생성없이 그대로 입력
+# 15. 리스트 생성없이 그대로 입력
 array = input().split()
 
 
-# map(int, ) 와 int()의 차이
+# 16. map(int, ) 와 int()의 차이
 # map은 두개이상의 데이터가 들어올시 바로 바꿔주고 int바로쓰면 오류
 
 
-# 입력데이터가 많은 경우
+# 17. 입력데이터가 많은 경우
 # input() 대신에 사용
 import sys
 input_data = sys.stdin.readline().rstrip()
 print(input_data)
 
 
-# 리스트로 바로바로 입력됨.
+# 18. 리스트로 바로바로 입력됨.
 input = sys.stdin.readline
 print(input().split())
 
 
-# 무한대
+# 19. 무한대
 INF = int(1e9)
 
 
-# 힙큐 사용
+# 20. 힙큐 사용
 import heapq
 q = []
 heapq.heappush(q, (1, 2))
@@ -121,6 +121,11 @@ heapq.heappush(q, (1, 2))
     # dist, now = heapq.heappop(q) # 꺼냄
 
 
-# str은 문자열 변경 접근 안됨
+# 21. str은 문자열 변경 접근 안됨
 # 리스트로 변경해서 진행
 a = list("1")
+
+
+# 22. 문자가 알파벳인지 확인
+a = "a"
+a.isalpha()
