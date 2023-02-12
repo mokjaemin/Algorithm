@@ -1,55 +1,36 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
 
 
 # 치킨 배달
-# n = int(input("입력 : "))
-n = 5
-# m = int(input("입력 : "))
-m = 2
-# graph = []
-# for i in range(n):
-#     graph.append(list(map(int, input("입력").split())))
-graph = [[0, 2, 0, 1, 0], [1, 0, 1, 0, 0], [0, 0, 0, 0, 0], [2, 0, 0, 1, 1], [2, 2, 0, 1, 2]]
-house_pos = []
-chicken_pos = []
-chicken_value = []
-for i in range(n):
-    for j in range(n):
-        if graph[i][j] == 1:
-            house_pos.append([i+1, j+1])
-        elif graph[i][j] == 2:
-            chicken_pos.append([i+1, j+1])
-total = [[] for i in range(len(chicken_pos))]
-k = 0
-for i in house_pos:
-    for j in chicken_pos:
-        total[k].append(abs(i[0]-j[0]) + abs(i[1]-j[1]))
-        k += 1
-    k = 0
 
-print(total)
-import itertools
-if len(total) <= m:
-    result = 0
-    for j in total:
-        result += min(j)
-    print(result)
+from itertools import combinations
+n, m = map(int, input().split()) # 맵의 크기, 치킨집의 수 입력
+chicken, house  = [], [] # 집과 치킨집의 위치 저장
 
-else:
-    arr = [i for i in range(len(chicken_pos))]
-    per = list(itertools.permutations(arr, m))
+for r in range(n):
+    data = list(map(int, input().split()))
+    for c in range(n):
+        if data[c] == 1:
+            house.append((r, c))
+        elif data[c] == 2:
+            chicken.append((r, c))
+
+# 치킨집 중 m개로 이루어진 조합
+candidates = list(combinations(chicken, m))
+
+
+def get_sum(condidate): # candidate - (1, 0), (2, 1) 등 치킨집의 위치
     result = 0
-    final = 0
-    min_value = 100*m
-    min_value_final = 100*m
-    final_list = []
-    for i in range(len(total)):
-        for j in per:
-            for k in j:
-                result = total[i][k]
-                if result <= min_value:
-                    min_value = result
-            final += min_value
-        final_list.append(final)
-        final = 0
-    print(final_list)
+    for hx, hy in house: # 집의 위치
+        temp = 1e9
+        for cx, cy in candidate: # 선택된 치킨집의 위치
+            temp = min(temp, abs(hx-cx) + abs(hy-cy))
+        result += temp
+    return result
+
+
+result = 1e9
+# 조합을 하나하나 벗겨가며 그 결과가 가장 작은 것을 선택
+for candidate in candidates:
+    result = min(result, get_sum(candidate))
+print(result)

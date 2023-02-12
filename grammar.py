@@ -133,3 +133,9 @@ a.isalpha()
 
 # 23. 절대값
 abs(-1)
+
+
+# 24. 조합
+# a리스트에서 m개를 골라 조합 만듬
+from itertools import combinations
+candidates = list(combinations(a, m))
