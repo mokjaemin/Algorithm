@@ -139,3 +139,11 @@ abs(-1)
 # a리스트에서 m개를 골라 조합 만듬
 from itertools import combinations
 candidates = list(combinations(a, m))
+
+# 25. 순열
+# n개의 원소가 들어있는 리스트에서 n개를 선택하는 경우의 수
+# nPn, n!
+from itertools import permutations
+def solution(n, weak, dist):
+    for friends in list(permutations(dist, len(dist))):
+        print(friends)
