@@ -44,8 +44,6 @@ def bfs(queue, start, visited):
                 queue.append(i)
                 visited[i] = True
     
-
-
 start = 1
 visited = [False for i in range(9)]
 visited[0] = True
