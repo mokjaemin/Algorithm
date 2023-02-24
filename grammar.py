@@ -155,3 +155,12 @@ from itertools import permutations
 def solution(n, weak, dist):
     for friends in list(permutations(dist, len(dist))):
         print(friends)
+
+
+# 26. 맵 재설정
+map1 = []
+map_print = []
+map1 = map_print # 이런식으로하면 안됨
+# for문 안에서 돌아간다고 가정했을때
+# 바뀐 부분 다시 돌리는게 나음
+# DFS_BFS_Question8.py 참조
