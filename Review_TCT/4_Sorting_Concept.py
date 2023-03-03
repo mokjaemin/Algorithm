@@ -27,7 +27,9 @@ for i in range(1, len(array)):
 
 
 # 3. 퀵 정렬
+# 방법 1
 array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+
 def quick_sort(array, start, end):
     if start >= end:
         return
@@ -48,4 +50,23 @@ def quick_sort(array, start, end):
 
 
 quick_sort(array, 0, len(array)-1)
-print(array)
+
+
+# 방법 2
+array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+
+def quick(array):
+    # 1보다 작으면 그대로 돌려줌
+    if len(array) <= 1:
+        return array
+    
+    pivot = array[0]
+    tail = array[1:]
+
+    left_side = [x for x in tail if x <= pivot]
+    right_side = [x for x in tail if x > pivot]
+
+    return quick(left_side) + [pivot] + quick(right_side)
+
+new_array = quick(array)
+print(new_array)
