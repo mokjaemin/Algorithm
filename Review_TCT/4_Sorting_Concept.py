@@ -69,4 +69,14 @@ def quick(array):
     return quick(left_side) + [pivot] + quick(right_side)
 
 new_array = quick(array)
-print(new_array)
+# print(new_array)
+
+
+# 4. 계수 정렬
+array = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
+checkList = [0] * (max(array)+1)
+for i in array:
+    checkList[i] += 1
+for i in range(len(checkList)):
+    for j in range(checkList[i]):
+        print(i, end=" ")
