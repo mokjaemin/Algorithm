@@ -80,3 +80,6 @@ for i in array:
 for i in range(len(checkList)):
     for j in range(checkList[i]):
         print(i, end=" ")
+
+
+
