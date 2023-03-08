@@ -181,3 +181,10 @@ a.sort(key = lambda x : (-int(x[1]), int(x[2]), -int(x[3]), x[0]))
 example = [1, 2, 3, 4, 5]
 # 1의 개수 구할때
 example.count(1)
+
+
+# 29. 정렬된 배열에서 특정 데이터가 등장하는 첫인덱스와 마지막인덱스 구하기
+# 5_Searching_Question3.py 참고
+from bisect import bisect_left, bisect_right
+result = bisect_left(array, 4) # 배열, 찾고자 하는 값
+print(result) # 결과는 인덱스 출력됨
