@@ -188,3 +188,7 @@ example.count(1)
 from bisect import bisect_left, bisect_right
 result = bisect_left(array, 4) # 배열, 찾고자 하는 값
 print(result) # 결과는 인덱스 출력됨
+
+
+# 30. 배열 역으로 만들기
+example[::-1]
