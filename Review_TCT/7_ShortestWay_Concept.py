@@ -69,10 +69,10 @@ heapq.heappush(q, (0, start))
 
 while q:
     dist, now = heapq.heappop(q)
-    print("now : ", now, " dist : ", dist)
+    # print("now : ", now, " dist : ", dist)
     if dist > distance[now]:
-        print("이미 처리된 적 있음")
-        print(distance[now])
+        # print("이미 처리된 적 있음")
+        # print(distance[now])
         continue
     if visited[now] == False:
         visited[now] = True
@@ -81,10 +81,42 @@ while q:
             if cost < distance[new[0]]:
                 distance[new[0]] = cost
                 heapq.heappush(q, (cost, new[0]))
-print(distance)
+# print(distance)
     
 
 
 
 
 # 3. 플로이드 워셜 알고리즘
+
+n = 4
+INF = int(1e9)
+# graph = [[0]*(n+1)]*(n+1)
+# for i in range(7):
+#     a, b, c = map(int, input("입력 : ").split())
+#     print(a, b, c)
+# print(graph)
+
+graph = [
+    [0, 0, 0, 0, 0],
+    [0, 0, 4, INF, 6],
+    [0, 3, 0, 7, INF],
+    [0, 5, INF, 0, 4],
+    [0, INF, INF, 2, 0]
+]
+
+for i in range(1, 5):
+    checks = []
+    for j in range(1, 5):
+        if i != j:
+            checks.append(j)
+    for check1 in checks:
+        for check2 in checks:
+            if check1 != check2:
+                print("확인 : ", check1, check2)
+                print("거쳐감 : ", i)
+                graph[check1][check2] = min(graph[check1][check2], graph[check1][i]+graph[i][check2])
+    print(" ")
+
+for k in graph:
+    print(k)
