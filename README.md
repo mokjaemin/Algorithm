@@ -1,6 +1,6 @@
 # Algorithm files
 
-All files are for Algorithm.
+All files are for studying Algorithm.
 
 
 1. Greedy
