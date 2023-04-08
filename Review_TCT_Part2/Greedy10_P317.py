@@ -29,8 +29,11 @@
 import heapq
 
 def solution(food_times, k):
+    # 시간내에 음식을 다 먹을 경우
     if sum(food_times) <= k:
         return -1
+    
+    # 우선순위 큐 설정
     q = []
     for i in range(len(food_times)):
         heapq.heappush(q, (food_times[i], i+1))
@@ -46,6 +49,7 @@ def solution(food_times, k):
         previous = now
     result = sorted(q, key=lambda x:x[1])
     return result[(k-sum_value)%length][1]
+
 
 food_times = [3, 1, 2]
 k = 5
