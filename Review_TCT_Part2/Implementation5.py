@@ -18,8 +18,8 @@ def solution(input):
     else:
         print("READY")
 
-input1 = str(123402)
-input2 = str(7755)
+input1 = "123402"
+input2 = "7755"
 solution(input1)
 solution(input2)
 
