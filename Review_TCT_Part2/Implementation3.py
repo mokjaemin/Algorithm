@@ -4,7 +4,7 @@
 # 왕실의 나이트
 
 pos = "a1"
-column = int(ord(pos[0]) - int(ord('a'))) + 1
+column = int( ord(pos[0]) - int(ord('a')) ) + 1
 row = int(pos[1])
 a = [-2, 2]
 b = [-1, 1]
