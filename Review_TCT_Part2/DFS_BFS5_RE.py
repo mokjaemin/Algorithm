@@ -8,7 +8,6 @@ from collections import deque
 n, k = map(int, input().split())
 
 graph = []
-# 바이러스를 담을 리스트
 data = []
 
 for i in range(n):
