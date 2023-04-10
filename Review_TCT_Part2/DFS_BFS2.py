@@ -35,6 +35,3 @@ array = [
 start = [0, 0]
 visited = [[False]*len(array[0]) for _ in range(len(array))]
 bfs(array, visited, start)
-print(array[len(array)-1][len(array[0])-1])
-for i in array:
-    print(i)
