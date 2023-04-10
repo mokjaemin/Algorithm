@@ -22,7 +22,6 @@ def dfs(array, visited, start):
 
 from collections import deque
 def bfs(array, visited, start):
-
     queue = deque()
     queue.append(start)
     visited[start[0]][start[1]] = True
@@ -54,5 +53,5 @@ result = 0
 for i in range(len(array)):
     for j in range(len(array[0])):
         if visited[i][j] == False and array[i][j] == 0:
-            result += dfs(array, visited, [i, j])
+            result += bfs(array, visited, [i, j])
 print(result)

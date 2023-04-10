@@ -27,3 +27,7 @@ stack.pop()
 queue = deque()
 queue.append()
 queue.popleft()
+
+# visited 생성
+array = []
+visited = [[False]*len(array[0]) for _ in range(len(array))]

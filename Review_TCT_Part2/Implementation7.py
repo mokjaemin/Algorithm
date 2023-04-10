@@ -53,17 +53,20 @@ def solution(n, apples, turn):
 
 n1 = 6
 n2 = 10
+
 apples = [
     [3, 4],
     [2, 5],
     [5, 3]
 ]
+
 apples1 = [
     [1, 2],
     [1, 3],
     [1, 4],
     [1, 5]
 ]
+
 apples2 = [
     [1, 5],
     [1, 3],
@@ -71,15 +74,18 @@ apples2 = [
     [1, 6],
     [1, 7]
 ]
+
 turn = [
     [3, 'D'],
     [15, 'L'],
     [17, 'D']
 ]
+
 turn1 = [
     [8, 'D'],
     [10, 'D'],
     [11, 'D'],
     [13, 'L']
 ]
+
 print(solution(n1, apples, turn))
