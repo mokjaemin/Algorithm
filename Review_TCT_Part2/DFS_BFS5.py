@@ -1,35 +1,39 @@
 
 
-# 경쟁적 전염
-dx = [-1, 0, 1, 0]
-dy = [0, -1, 0, 1]
+
+# 경쟁적 전염 답안
+
 from collections import deque
 
-def bfs(array, n, k, s, final_x, final_y, queue):
-    while queue:
-        now = queue.popleft()
-        if now[3] == s:
-            return array[final_x-1][final_y-1]
-        for i in range(4):
-            next_x = now[0] + dx[i]
-            next_y = now[1] + dy[i]
-            if next_x < 0 or next_x >= n or next_y < 0 or next_y >= n:
-                continue
-            if array[next_x][next_y] == 0:
-                array[next_x][next_y] = now[2]
-                queue.append([next_x, next_y, now[2], now[3]+1])
-    return array[final_x-1][final_y-1]
-            
-
 n, k = map(int, input().split())
+
+graph = []
 data = []
-array = []
+
 for i in range(n):
-    array.append(list(map(int, input().split())))
+    graph.append(list(map(int, input().split())))
     for j in range(n):
-        if array[i][j] != 0:
-            data.append((i, j, array[i][j], 0))
+        if graph[i][j] != 0:
+            data.append((graph[i][j], 0, i, j))
+
 data.sort()
-queue = deque(data)
-s, final_x, final_y = map(int, input().split())
-print(bfs(array, n, k, s, final_x, final_y, queue))
+q = deque(data)
+
+target_s, target_x, targer_y = map(int, input().split())
+
+dx = [-1, 0, 1, 0]
+dy = [0, -1, 0, 1]
+
+while q:
+    virus, s, x, y = q.popleft()
+    if s == target_s:
+        break
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+        if 0 <= nx < n and 0 <= ny < n:
+            if graph[nx][ny] == 0:
+                graph[nx][ny] = virus
+                q.append((virus, s+1, nx, ny))
+
+print(graph[target_x-1][targer_y-1])
