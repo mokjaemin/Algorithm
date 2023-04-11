@@ -31,3 +31,17 @@ queue.popleft()
 # visited 생성
 array = []
 visited = [[False]*len(array[0]) for _ in range(len(array))]
+
+# 입력 받는 방법 특이하니 다시 보자
+t = int(input())
+final_test = []
+num = []
+for i in range(t):
+    n, m = map(int, input().split())
+    test = list(map(int, input().split()))
+
+    dp = []
+    index = 0
+    for i in range(n):
+        dp.append(test[index:index+m])
+        index += m
