@@ -31,7 +31,8 @@ for i in range(t):
                         continue
                     max_value = max(max_value, graph[before_x][before_y])
                 graph[x][y] = max_value + graph[x][y]
-            result = max(result, graph[x][m-1])
+        for i in range(n):
+            result = max(result, graph[i][m-1])
         final_result.append(result)
         break
 print(final_result)

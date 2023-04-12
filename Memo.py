@@ -45,3 +45,10 @@ for i in range(t):
     for i in range(n):
         dp.append(test[index:index+m])
         index += m
+
+
+# 역 for
+# 4 ~ 0
+n = 5
+for i in range(n-1, -1, -1):
+    print(i)
