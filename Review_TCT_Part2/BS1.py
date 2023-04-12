@@ -6,7 +6,6 @@
 n = 5
 products = [8, 3, 7, 9, 2]
 products.sort()
-
 m = 3
 find = [5, 7, 9]
 
@@ -24,13 +23,13 @@ def binary_search(length, i):
         return binary_search([mid_index+1, max_index], i)
 
 
-# for i in find:
-#     result = binary_search([0, n], i)
-#     if not result:
-#         print("no", end=" ")
-#         continue
-#     print("yes", end=" ")
-# print(" ")
+for i in find:
+    result = binary_search([0, n], i)
+    if not result:
+        print("no", end=" ")
+        continue
+    print("yes", end=" ")
+print(" ")
 
 
 n = 5
@@ -44,6 +43,7 @@ for product in products:
     check[product] = 1
 for i in find:
     if check[i] == 1:
-        print("yes")
+        print("yes", end=" ")
     else:
-        print("no")
+        print("no", end=" ")
+print(" ")

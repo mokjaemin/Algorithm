@@ -10,7 +10,7 @@ n = 7
 x = 2
 array = [1, 1, 2, 2, 2, 2, 3]
 
-left_index = bisect_left(array, 0)
+left_index = bisect_left(array, x)
 right_index = bisect_right(array, x)
 print(left_index, right_index)
 result = right_index-left_index

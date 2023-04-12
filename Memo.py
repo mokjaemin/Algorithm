@@ -52,3 +52,23 @@ for i in range(t):
 n = 5
 for i in range(n-1, -1, -1):
     print(i)
+
+
+# 리스트에서 특정값의 인덱스 찾기
+# 정렬된 배열에서 사용 가능하다. 
+# 가장 왼쪽 인덱스, 가장 오른쪽 인덱스를 알아내 해당 값을 가지는 수를 구할 수 도 있다.
+# 해당 예시는 배열에서 2의 가장 왼쪽 인덱스, 가장 오른쪽 인덱스를 구한다
+# 만약 배열에 해당 값이 없다면 각각 0을 반환한다.
+# 정렬된 ["abc", "acd", "acs"]가 있다고 가정할때 aaa ~ azz까지 해당되는 개수도 반환가능
+from bisect import bisect_left, bisect_right
+left_index = bisect_left(array, 2)
+right_index = bisect_right(array, 2)
+result = right_index-left_index
+
+
+
+# 문자열 역 처리
+result[::-1]
+
+# 문자열 대체
+result.replace('?', 'a')

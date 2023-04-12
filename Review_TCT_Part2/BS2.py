@@ -19,7 +19,7 @@ while max_index >= min_index:
     if result < m:
         max_index = mid_index-1
     else:
-        min_index = mid_index + 1
+        min_index = mid_index+1
 print(mid_index)
 
 
