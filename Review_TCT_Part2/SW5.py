@@ -35,7 +35,6 @@ while q:
     now_cost, now_pos = heapq.heappop(q)
     # 현재 노드가 굳이 처리할 필요가 없는 노드라면 패스
     if now_cost > distance[now_pos[0]][now_pos[1]]:
-        print("a ")
         continue
     for i in range(4):
         next_x = now_pos[0] + dx[i]
@@ -43,6 +42,7 @@ while q:
         if next_x < 0 or next_x >= n or next_y < 0 or next_y >= n:
             continue
         next_cost = now_cost + graph[next_x][next_y]
+        # 굳이 지금 가는 길이 갈 필요가 있는지 없는지 체크한다 생각
         if distance[next_x][next_y] > next_cost:
             distance[next_x][next_y] = next_cost
             heapq.heappush(q, [next_cost, [next_x, next_y]])

@@ -23,7 +23,6 @@ max_value = 0
 while q:
     dist, now = heapq.heappop(q)
     max_value = max(max_value, dist)
-    print(dist, now)
     if distance[now] < dist:
         continue
     for next in graph[now]:

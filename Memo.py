@@ -87,3 +87,7 @@ graph = [[INF]*(n+1) for _ in range(n+1)]
 for i in range(m):
     a, b = map(int, input().split())
     graph[a][b] = 1
+
+
+
+from collections import deque
