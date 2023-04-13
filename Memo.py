@@ -72,3 +72,18 @@ result[::-1]
 
 # 문자열 대체
 result.replace('?', 'a')
+
+
+# 인접 리스트
+graph = [[] for _ in range(n+1)]
+for i in range(m):
+    a, b = map(int, input().split())
+    graph[a].append(b)
+    graph[b].append(a)
+
+# 인접 행렬
+INF = int(1e9)
+graph = [[INF]*(n+1) for _ in range(n+1)]
+for i in range(m):
+    a, b = map(int, input().split())
+    graph[a][b] = 1
