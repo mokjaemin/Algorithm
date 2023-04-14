@@ -5,10 +5,10 @@ column = int(ord('b') - int(ord('a'))) + 1
 
 # 알파벳인지 확인 Boolean
 test = 'A'
-print(test.isalpha())
+# print(test.isalpha())
 
 # 리스트의 특정 인덱스 삭제
-test = [1, 2, 3]
+test = [1, 0, 2, 3]
 test.pop(2)
 print(test)
 
@@ -50,8 +50,8 @@ for i in range(t):
 # 역 for
 # 4 ~ 0
 n = 5
-for i in range(n-1, -1, -1):
-    print(i)
+# for i in range(n-1, -1, -1):
+#     print(i)
 
 
 # 리스트에서 특정값의 인덱스 찾기
@@ -87,7 +87,5 @@ graph = [[INF]*(n+1) for _ in range(n+1)]
 for i in range(m):
     a, b = map(int, input().split())
     graph[a][b] = 1
-
-
 
 from collections import deque

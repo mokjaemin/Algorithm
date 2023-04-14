@@ -1,6 +1,6 @@
 
 
-# 미로 탐색 - BFS/DFS
+# 미로 탐색 - 백준
 
 from collections import deque
 

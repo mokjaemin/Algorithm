@@ -9,7 +9,7 @@ def solution(n, k, x, array):
     queue = deque()
     queue.append(x)
     while queue:
-        now= queue.popleft()
+        now = queue.popleft()
         for i in array[now]:
             if distance[i] == -1:
                 distance[i] = distance[now] + 1
@@ -20,18 +20,12 @@ def solution(n, k, x, array):
             result.append(i)
     return result
 
+n, m, k, x = map(int, input().split())
+array = [[] for _ in range(n+1)]
+for i in range(m):
+    a, b = map(int, input().split())
+    array[a].append(b)
 
-
-
-
-n, m, k, x = 4, 4, 1, 1
-array = [
-    [],
-    [2, 3],
-    [3, 4],
-    [],
-    []
-]
 result = solution(n, k, x, array)
 if len(result) == 0:
     print("-1")

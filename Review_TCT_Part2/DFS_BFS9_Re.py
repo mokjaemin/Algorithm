@@ -17,17 +17,12 @@ dx = [-1, 0, 1, 0]
 dy = [0, -1 ,0, 1]
 real_count = 0
 
-
 while(1):
-
     again_check = False
     check = [[0]*n for _ in range(n)]
     q = deque()
-
     group = 0
-    sum_list = []
-    count_list = []
-
+    change_list = []
     for x in range(n):
         for y in range(n):
             if check[x][y] != 0:
@@ -52,19 +47,16 @@ while(1):
                         again_check = True
                         sum_result += graph[next_x][next_y]
                         count_result += 1
-            sum_list.append(sum_result)
-            count_list.append(count_result)
+            change_list.append(sum_result/count_result)
     
-
     if again_check == False:
         break
-
 
     for change in range(1, group+1):
         for x in range(n):
             for y in range(n):
                 if check[x][y] == change:
-                    graph[x][y] = int(sum_list[change-1]/count_list[change-1])
+                    graph[x][y] = int(change_list[change-1])
     
     real_count += 1
 
