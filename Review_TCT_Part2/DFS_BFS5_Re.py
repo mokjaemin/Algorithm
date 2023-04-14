@@ -34,8 +34,6 @@ while queue:
             graph[next_x][next_y] = virus
             queue.append([virus, s+1, next_x, next_y])
 
-for i in graph:
-    print(i)
 print(graph[target_x-1][target_y-1])
 
     
