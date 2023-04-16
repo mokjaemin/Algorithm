@@ -23,15 +23,15 @@ def dfs(i, now):
             add += 1
         if sub > 0:
             sub -= 1
-            dfs(i+1, now+data[i])
+            dfs(i+1, now-data[i])
             sub += 1
         if mul > 0:
             mul -= 1
-            dfs(i+1, now+data[i])
+            dfs(i+1, now*data[i])
             mul+= 1
         if div > 0:
             mul -= 1
-            dfs(i+1, now+data[i])
+            dfs(i+1, now/data[i])
             mul += 1
 
 dfs(1, data[0])
