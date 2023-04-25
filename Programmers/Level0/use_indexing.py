@@ -1,4 +1,9 @@
 
+
+
+
+# 해당 값의 인덱스 찾기
+
 def solution(emergency):
     answer = []
     check = sorted(emergency, reverse=True)
