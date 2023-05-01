@@ -11,6 +11,9 @@ public class JavaBasicNew {
         int inf1 = (int)1e9;
         int inf2 = (int)-1e9;
 
+
+
+
         // (형변환) int -> char
         int num = 6;
         char ch = (char)(num + '0');
@@ -33,6 +36,9 @@ public class JavaBasicNew {
         // (형변환) String -> int
         Integer new_int10 = Integer.parseInt(new_string1);
 
+
+
+
         // (Math) 제곱
         Math.pow(2, 3); // 2의 3승
 
@@ -40,43 +46,98 @@ public class JavaBasicNew {
         Math.min(1, 0);
         Math.max(1, 0);
 
-        // (정적 리스트) 생성
+        // (Math) 올림
+        Math.ceil(3.1);
+
+        // (Math) 올림을 사용하고 싶은 경우
+        // (int)/(int) 인 경우, 분모가 (double)이여야 소수점까지 구해줌
+        int left = 10;
+        int speed = 10;
+        System.out.println(Math.ceil(left/(double)speed));
+
+
+
+
+
+        // (정적 리스트) 1. 생성
         int[] check = new int[10];
         String[] check_String = new String[10];
         char[] check_char = new char[10];
 
-        // (정적 리스트) 정렬
+        // (정적 리스트) 2. 정렬, 내림차순은 for문 사용
         Arrays.sort(check);
+        
+        // (정적 리스트) 3. 값 포함 여부
+        // for문 사용
 
-        // (문자열), (정적 리스트) 길이
-        String a = "abc";
-        System.out.println(a.length());
+        // (정적 리스트) 4. 뒤집기
+        // temp 사용
+
+        // (정적 리스트) 5. 길이
         System.out.println(check_String.length);
 
-        // (문자열-정적리스트) 분리
+        // (정적 리스트) 6. 인덱스 삭제
+        // for 문 이용
+
+        // (정적 리스트) 7. 값 삭제
+        // for문 사용
+
+
+
+
+        // (문자열) 1. 생성, 분리
         String str = "Hello World";
         String[] arrOfStr = str.split(" ");
 
-        // (문자열) 특정 문자로 시작하는지 여부
+        // (문자열) 2. 정렬
+        char[] s = str.toCharArray();
+        Arrays.sort(s);
+
+        // (문자열) 3. 특정값 포함 여부
+        // (문자열) 특정 문자열 포함 여부
+        String reversed = "ss";
+        System.out.println(reversed.contains("s"));
+        
+        // (문자열) 특정 문자 포함 여부, 포함 안할시 -1
+        reversed.indexOf('c');
+        
+        // 특정 문자로 시작하는지 여부
         String[] phone_book = {"123", "456"};
         System.out.println(phone_book[0].startsWith(phone_book[1]));
-
+        
         // (문자열) 비교
         String b = "abc";
         b.equals(b);
-
-        // (문자열) 인덱스로 접근
-        b.charAt(0);
-
-        // (문자열) 대체
+        
+        // (문자열) 대체, 삭제
         String my_string = "abcde";
         String result = my_string.replace(String.valueOf("a"), "");
         String result1 = my_string.replace(String.valueOf("aeuoi"), "");
         
-        // (문자열) 뒤집기(String - Char - String), 삽입
+        // (문자열) 문자열에 char 추가
+        String check4 = "";
+        Character s1 = '1';
+        check4 += s1;
+
+        // (문자열) 인덱싱
+        check4.substring(0, 2);
+
+
+
+        // (문자열) 4. 뒤집기(String - Char - String), 삽입
         StringBuffer sb = new StringBuffer(my_string);
-        String reversed = sb.reverse().toString();
+        String reversed1 = sb.reverse().toString();
         sb.append('a');
+
+        // (문자열) 5. 길이
+        String a = "abc";
+        System.out.println(a.length());
+        System.out.println(check_String.length);
+
+        // (문자열) 6. 인덱스로 접근
+        b.charAt(0);
+
+
 
         // (문자) 해당 문자가 알파벳인지
         char c = 'a';
@@ -87,59 +148,61 @@ public class JavaBasicNew {
         Character.toUpperCase('c');
         Character.isLowerCase(my_string.charAt(0));
         Character.toLowerCase('c');
-
-        // (문자열) 특정 문자열 포함 여부
-        System.out.println(reversed.contains(result1));
-
-        // (문자열) 특정 문자 포함 여부, 포함 안할시 -1
-        reversed.indexOf('c');
-
-        // (문자열) 문자열에 char 추가
-        String check4 = "";
-        Character s = '1';
-        check4 += s;
-
-        // (문자열) 인덱싱
-        check4.substring(0, 2);
         
-        // (동적 리스트) 생성, 변경
+
+
+
+
+
+
+        // (동적 리스트) 1. 생성
         List<String> check1 = new ArrayList<>();
         List<Character> check1_char = new ArrayList<>();
-        List<String> list1 = Arrays.asList(check_String);
 
-        // (동적 리스트) Stirng 리스트를 동적리스트로 변환
+        // (동적 리스트) 1. Stirng 리스트를 동적리스트로 변환
         String[] check2_String = {"a", "b"};
         List<String> check2 = Arrays.asList(check2_String);
 
-        // (동적 리스트) Integer 리스트를 동적리스트로 변환
+        // (동적 리스트) 1. Integer 리스트를 동적리스트로 변환
         int[] check3_int = {1, 2, 3, 4};
         List<Integer> check3 = new ArrayList<>();
         for (int i : check3_int){
             check3.add(i);
         }
 
-        // (동적 리스트) 특정 값 포한 여부
+        // (동적 리스트) 2. 정렬, 역정렬
+        Collections.sort(check3);
+        Collections.sort(check3, Collections.reverseOrder());
+
+        // (동적 리스트) 3. 특정 값 포한 여부
         check3.contains(1);
 
-        // (동적 리스트) 정렬
-        Collections.sort(check3);
-
-        // (동적 리스트) List 뒤집기
+        // (동적 리스트) 4. List 뒤집기
         Collections.reverse(check3);
+
+        // (동적 리스트) 5. 길이
+        check3.size();
+
+        // (동적 리스트) 6. 특정 인덱스 삭제
+        check3.remove(0);
+
+        // (동적 리스트) 7. 특정 값 삭제
+        check3.remove(Integer.valueOf(3));
+        check2.remove(String.valueOf("a"));
+        check2.remove(Character.valueOf('a'));
+
+        // (동적 리스트) 8. 인덱스로 값 불러오기
+        check3.get(0);
+
+        // (동적 리스트) 9. 값으로 인덱스 불러오기
+        check3.indexOf("a");
 
         // (동적 리스트) 문자열로 변환
         check3.toString();
 
-        // (동적 리스트) 크기
-        check3.size();
 
-        // (동적 리스트) 특정 인덱스 삭제
-        check3.remove(0);
 
-        // (동적 리스트) 특정 값 삭제
-        check3.remove(Integer.valueOf(3));
-        check2.remove(String.valueOf("a"));
-        check2.remove(Character.valueOf('a'));
+
 
         // (해시) 키-값 설정
         Map<String, Integer> map1 = new HashMap<String, Integer>();
@@ -153,6 +216,22 @@ public class JavaBasicNew {
         for(String s2 : check2){
             map1.put(s2, map1.getOrDefault(s, 0)+1);
         }
+
+
+
+        // 우선순위 큐 (최소힙)
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        minHeap.add(1); // 추가
+        minHeap.peek(); // 최솟값 출력
+        minHeap.poll(); // 최솟값 제거
+
+
+        // 우선순위 큐 (최대힙)
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        maxHeap.add(1);
+        maxHeap.peek();
+        maxHeap.poll();
+
 
 
 
