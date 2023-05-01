@@ -22,7 +22,7 @@ public class JavaBasicNew {
         char c1 = '1';
         int new_int1 = (int)c1 - 48;
 
-        // (형변환) String -> char
+        // (형변환) String -> char[]
         String result10 = "abc";
         char[] result10_char = result10.toCharArray();
 
@@ -94,6 +94,7 @@ public class JavaBasicNew {
         Arrays.sort(s);
 
         // (문자열) 3. 특정값 포함 여부
+        
         // (문자열) 특정 문자열 포함 여부
         String reversed = "ss";
         System.out.println(reversed.contains("s"));
@@ -200,6 +201,11 @@ public class JavaBasicNew {
         // (동적 리스트) 문자열로 변환
         check3.toString();
 
+        // (동적 리스트) 비었는지 확인
+        check3.isEmpty();
+
+        // (동적 리스트) 비우기
+        check3.clear();
 
 
 
