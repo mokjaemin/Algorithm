@@ -43,6 +43,7 @@ public class JavaBasicNew {
         // (정적 리스트) 생성
         int[] check = new int[10];
         String[] check_String = new String[10];
+        char[] check_char = new char[10];
 
         // (정적 리스트) 정렬
         Arrays.sort(check);
@@ -52,7 +53,7 @@ public class JavaBasicNew {
         System.out.println(a.length());
         System.out.println(check_String.length);
 
-        // (문자열) 분리
+        // (문자열-정적리스트) 분리
         String str = "Hello World";
         String[] arrOfStr = str.split(" ");
 
@@ -62,7 +63,7 @@ public class JavaBasicNew {
 
         // (문자열) 비교
         String b = "abc";
-        System.out.println(a.equals(b));
+        b.equals(b);
 
         // (문자열) 인덱스로 접근
         b.charAt(0);
@@ -97,10 +98,14 @@ public class JavaBasicNew {
         String check4 = "";
         Character s = '1';
         check4 += s;
+
+        // (문자열) 인덱싱
+        check4.substring(0, 2);
         
-        // (동적 리스트) 생성
+        // (동적 리스트) 생성, 변경
         List<String> check1 = new ArrayList<>();
         List<Character> check1_char = new ArrayList<>();
+        List<String> list1 = Arrays.asList(check_String);
 
         // (동적 리스트) Stirng 리스트를 동적리스트로 변환
         String[] check2_String = {"a", "b"};
