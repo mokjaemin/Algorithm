@@ -36,6 +36,19 @@ public class JavaBasicNew {
         // (형변환) String -> int
         Integer new_int10 = Integer.parseInt(new_string1);
 
+        // (형변환) long -> String
+        Long new_long = Long.parseLong(new_string1);
+
+        // (형변환) List<Character> -> String
+        List<Character> charList = Arrays.asList('H', 'e', 'l', 'l', 'o');
+        StringBuilder sb = new StringBuilder();
+        for (char c : charList) {
+            sb.append(c);
+        }
+        String str = sb.toString();
+
+
+
 
 
 
@@ -90,7 +103,7 @@ public class JavaBasicNew {
 
 
         // (문자열) 1. 생성, 분리
-        String str = "Hello World";
+        String str1 = "Hello World";
         String[] arrOfStr = str.split(" ");
 
         // (문자열) 2. 정렬
@@ -130,7 +143,7 @@ public class JavaBasicNew {
 
 
         // (문자열) 4. 뒤집기(String - Char - String), 삽입
-        StringBuffer sb = new StringBuffer(my_string);
+        StringBuffer sb1 = new StringBuffer(my_string);
         String reversed1 = sb.reverse().toString();
         sb.append('a');
 
@@ -214,6 +227,18 @@ public class JavaBasicNew {
         // (동적 리스트) 비우기
         check3.clear();
 
+        // (동적 리스트) 인접 리스트
+        int n = 1;
+        int[][] wires = {};
+        List<List<Integer>> connected = new ArrayList<>();
+        for(int i=0; i<=n; i++){
+            List<Integer> now = new ArrayList<>();
+            connected.add(now);
+        }
+        for(int[] wire : wires){
+            connected.get(wire[0]).add(wire[1]);
+        }
+
 
 
 
@@ -250,7 +275,7 @@ public class JavaBasicNew {
     }
 
 
-    // 조합
+    // 조합 (Combinations)
     private static void combinations(
         List<List<Integer>> lists, List<List<Integer>> result, 
         List<Integer> temp, int start, int r) {
@@ -268,7 +293,7 @@ public class JavaBasicNew {
         }
     }
 
-    // 순열
+    // 순열 (Permutations)
     public void permutations(
         List<Integer> nums, List<List<Integer>> result, 
         List<Integer> temp, Boolean[] used, int n) {
@@ -281,7 +306,7 @@ public class JavaBasicNew {
                 temp.add(nums.get(i));
                 used[i] = true;
                 permutations(nums, result, temp, used, n);
-                temp.remove(temp.size() - 1);
+                temp.remove(nums.get(i));
                 used[i] = false;
             }
         }
