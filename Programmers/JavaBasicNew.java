@@ -82,6 +82,10 @@ public class JavaBasicNew {
         // (정적 리스트) 7. 값 삭제
         // for문 사용
 
+        // (정적 리스트) 채우기
+        Boolean[] used = new Boolean[5];
+        Arrays.fill(used, false);
+
 
 
 
@@ -198,6 +202,9 @@ public class JavaBasicNew {
         // (동적 리스트) 9. 값으로 인덱스 불러오기
         check3.indexOf("a");
 
+        // (동적 리스트) 10. 값 변경
+        check3.set(0, 10);
+
         // (동적 리스트) 문자열로 변환
         check3.toString();
 
@@ -239,10 +246,44 @@ public class JavaBasicNew {
         maxHeap.poll();
 
 
-
-
-
-
         return answer;
+    }
+
+
+    // 조합
+    private static void combinations(
+        List<List<Integer>> lists, List<List<Integer>> result, 
+        List<Integer> temp, int start, int r) {
+        if (temp.size() == r) {
+            result.add(new ArrayList<>(temp));
+            return;
+        }
+
+        for (int i = start; i < lists.size(); i++) {
+            temp.add(lists.get(i).get(0));
+            temp.add(lists.get(i).get(1));
+            combinations(lists, result, temp, i + 1, r);
+            temp.remove(temp.size() - 1);
+            temp.remove(temp.size() - 1);
+        }
+    }
+
+    // 순열
+    public void permutations(
+        List<Integer> nums, List<List<Integer>> result, 
+        List<Integer> temp, Boolean[] used, int n) {
+        if(temp.size() == n) {
+            result.add(new ArrayList<>(temp));
+            return;
+        }
+        for(int i = 0; i < nums.size(); i++) {
+            if(!used[i]) {
+                temp.add(nums.get(i));
+                used[i] = true;
+                permutations(nums, result, temp, used, n);
+                temp.remove(temp.size() - 1);
+                used[i] = false;
+            }
+        }
     }
 }
