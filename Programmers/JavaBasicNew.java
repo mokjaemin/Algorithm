@@ -4,9 +4,9 @@ import java.util.*;
 import java.lang.Math;
 
 public class JavaBasicNew {
-    
+
     // (클래스의 전역 변수)
-    public static int resultAll1 = 0;
+    private static int resultAll1 = 0;
 
 
     public int[] solution(int[] num_list) {
@@ -200,6 +200,11 @@ public class JavaBasicNew {
             check3.add(i);
         }
 
+        // (동적리스트) 삽입
+        List<List<Integer>> now = new ArrayList<>();
+        now.add(Arrays.asList(1, 2));
+
+
         // (동적 리스트) 2. 정렬, 역정렬
         Collections.sort(check3);
         Collections.sort(check3, Collections.reverseOrder());
@@ -250,8 +255,8 @@ public class JavaBasicNew {
         int[][] wires = {};
         List<List<Integer>> connected = new ArrayList<>();
         for(int i=0; i<=n; i++){
-            List<Integer> now = new ArrayList<>();
-            connected.add(now);
+            List<Integer> now1 = new ArrayList<>();
+            connected.add(now1);
         }
         for(int[] wire : wires){
             connected.get(wire[0]).add(wire[1]);
