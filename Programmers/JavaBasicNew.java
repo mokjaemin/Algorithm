@@ -4,6 +4,11 @@ import java.util.*;
 import java.lang.Math;
 
 public class JavaBasicNew {
+    
+    // (클래스의 전역 변수)
+    public static int resultAll1 = 0;
+
+
     public int[] solution(int[] num_list) {
         int[] answer = {};
 
@@ -12,6 +17,9 @@ public class JavaBasicNew {
         int inf2 = (int)-1e9;
 
 
+        // (숫자 - 알파벳)
+        int test = 65;
+        System.out.println((char) test); // A
 
 
         // (형변환) int -> char
@@ -95,9 +103,15 @@ public class JavaBasicNew {
         // (정적 리스트) 7. 값 삭제
         // for문 사용
 
+        // (정적 리스트) 값 변경
+        check_String[0] = "1";
+
         // (정적 리스트) 채우기
         Boolean[] used = new Boolean[5];
         Arrays.fill(used, false);
+
+        // (정적 리스트) 2차원 채우기
+        // Arrays.fill + for문
 
 
 
@@ -139,8 +153,6 @@ public class JavaBasicNew {
 
         // (문자열) 인덱싱
         check4.substring(0, 2);
-
-
 
         // (문자열) 4. 뒤집기(String - Char - String), 삽입
         StringBuffer sb1 = new StringBuffer(my_string);
@@ -218,6 +230,9 @@ public class JavaBasicNew {
         // (동적 리스트) 10. 값 변경
         check3.set(0, 10);
 
+        // (동적 리스트) 최대값 구하기
+        Collections.max(check3);
+
         // (동적 리스트) 문자열로 변환
         check3.toString();
 
@@ -226,6 +241,9 @@ public class JavaBasicNew {
 
         // (동적 리스트) 비우기
         check3.clear();
+
+        // (동적 리스트) 복사
+        List<Integer> now_check = new ArrayList<Integer>(check3);
 
         // (동적 리스트) 인접 리스트
         int n = 1;
