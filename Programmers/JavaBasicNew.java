@@ -67,8 +67,10 @@ public class JavaBasicNew {
         Math.min(1, 0);
         Math.max(1, 0);
 
-        // (Math) 올림
+        // (Math) 올림, 내림, 반올림
         Math.ceil(3.1);
+        Math.floor(3.1);
+        Math.round(3.1);
 
         // (Math) 올림을 사용하고 싶은 경우
         // (int)/(int) 인 경우, 분모가 (double)이여야 소수점까지 구해줌
