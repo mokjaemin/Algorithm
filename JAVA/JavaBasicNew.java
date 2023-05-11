@@ -1,4 +1,4 @@
-package Programmers;
+package JAVA;
 
 import java.util.*;
 import java.lang.Math;
