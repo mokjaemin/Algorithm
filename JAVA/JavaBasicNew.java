@@ -287,7 +287,9 @@ public class JavaBasicNew {
 
         // 우선순위 큐 (최소힙)
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        PriorityQueue<int[]> minHeap1 = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+        PriorityQueue<int[]> minHeap1 = new PriorityQueue<>((x, y) -> x[0] - y[0]);
+        PriorityQueue<List<Integer>> queue 
+            = new PriorityQueue<>(Comparator.comparingInt(list -> list.get(0)));
         minHeap.add(1); // 추가
         minHeap.peek(); // 최솟값 출력
         minHeap.poll(); // 최솟값 제거
