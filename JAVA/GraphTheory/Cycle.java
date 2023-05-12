@@ -7,6 +7,10 @@ public class Cycle {
         for(int[] line : lines){
             int parent1 = find_parent(parents, line[0]);
             int parent2 = find_parent(parents, line[1]);
+            for(int i : parents){
+                System.out.println(i);
+            }
+            System.out.println(" ");
             if(parent1 > parent2){
                 parents[line[0]] = parent2;
             }
@@ -17,7 +21,6 @@ public class Cycle {
                 parents[line[1]] = parent1;
             }
         }
-
     }
     private static int find_parent(int[] parents, int node){
         if(parents[node] != node){
