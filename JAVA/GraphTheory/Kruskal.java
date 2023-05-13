@@ -14,20 +14,9 @@ public class Kruskal {
             int parent1 = find_parent(parents, line[1]);
             int parent2 = find_parent(parents, line[2]);
             if(parent1 != parent2){
-                int parent3 = find_parent(parents, line[1]);
-                int parent4 = find_parent(parents, line[2]);
-                if(parent3 < parent4){
-                    parents[parent4] = parent3;
-                }
-                else{
-                    parents[parent3] = parent4;
-                }
+                parents[parent1] = (parent1 > parent2) ? parent2 : parent1;
+                parents[parent2] = (parent1 > parent2) ? parent2 : parent1;
                 result += line[0];
-                System.out.println(line[0]);
-                for(int i : parents){
-                    System.out.print(i);
-                }
-                System.out.println("");
             }
         }
         System.out.println(result);

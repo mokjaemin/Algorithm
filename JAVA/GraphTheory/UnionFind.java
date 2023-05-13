@@ -7,15 +7,11 @@ public class UnionFind {
         for(int[] now : data){
             int parent1 = new_find_parent(now[0] ,root);
             int parent2 = new_find_parent(now[1] ,root);
-            for(int i : root){
-                System.out.println(i);
-            }
-            System.out.println(" ");
             if(parent1 > parent2){
-                root[now[0]] = parent2;
+                root[parent1] = parent2;
             }
             else{
-                root[now[1]] = parent1;
+                root[parent2] = parent1;
             }
         }
     }

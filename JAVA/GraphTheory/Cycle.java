@@ -12,13 +12,13 @@ public class Cycle {
             }
             System.out.println(" ");
             if(parent1 > parent2){
-                parents[line[0]] = parent2;
+                parents[parent1] = parent2;
             }
             else if(parent1 == parent2){
                 System.out.println("사이클 발생");
             }
             else{
-                parents[line[1]] = parent1;
+                parents[parent2] = parent1;
             }
         }
     }
