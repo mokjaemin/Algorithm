@@ -1,8 +1,6 @@
 package JAVA.GraphTheory;
 
 import java.util.*;
-
-import javax.management.openmbean.ArrayType;
 public class TopologySort {
     public static void main(String[] args){
         int[][] lines = {{1, 2}, {1, 5}, {2, 3}, {2, 6}, {3, 4}, {4, 7}, {5, 6}, {6, 4}};
@@ -41,9 +39,5 @@ public class TopologySort {
                 }
             }
         }
-        for(int i : answer){
-            System.out.print(i);
-        }
-        System.out.print("");
     }    
 }
