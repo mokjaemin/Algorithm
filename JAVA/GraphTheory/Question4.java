@@ -29,6 +29,7 @@ public class Question4 {
         for(int i : parents){
             System.out.print(i);
         }
+        System.out.println(" ");
 
     }
     public static int find_parent(int[] parents, int node){
