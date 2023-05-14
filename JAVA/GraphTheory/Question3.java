@@ -10,6 +10,7 @@ public class Question3 {
         List<List<Integer>> map = new ArrayList<>();
         List<Integer> time = new ArrayList<>();
         int[] indegree = new int[5];
+
         for(int i=0; i<5; i++){
             indegree[i] = 0;
         }
@@ -22,13 +23,6 @@ public class Question3 {
             }
             time.add(data[j][0]);
         }
-        System.out.println(map);
-        System.out.println(time);
-        for(int i=0; i<5; i++){
-            System.out.print(indegree[i]);
-        }
-        System.out.println("");
-
         List<Integer> queue = new ArrayList<>();
         for(int i=0; i<indegree.length; i++){
             if(indegree[i] == 0){
@@ -46,11 +40,5 @@ public class Question3 {
                 }
             }
         }
-        System.out.println(time);
-        for(int i=0; i<5; i++){
-            System.out.print(indegree[i]);
-        }
-        System.out.println("");
-
     }
 }
