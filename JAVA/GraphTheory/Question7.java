@@ -39,7 +39,7 @@ public class Question7 {
             }
         }
         System.out.println(result);
-        
+        Boolean.valueOf(true);
     }
     public static int find_paretns(int[] parents, int node){
         if(node != parents[node]){
@@ -47,4 +47,5 @@ public class Question7 {
         }
         return parents[node];
     }
+    
 }
