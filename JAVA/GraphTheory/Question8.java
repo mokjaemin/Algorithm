@@ -17,7 +17,7 @@ public class Question8 {
         int[] data = {5, 4, 3, 2, 1};
         // 초기 랭크에 따른 초기화
         // indegree : 자신보다 높은 랭크 수
-        // graph : 노드별 연결여부
+        // graph : 노드별 연결여부 (a는 b보다 높다.)
         for(int i=0; i<n; i++){
             for(int j=i+1; j<n; j++){
                 graph[data[i]][data[j]] = true;
@@ -63,11 +63,13 @@ public class Question8 {
 
         for(int i=0; i<n; i++){
             // 사이클 발생
+            // 모든 노드를 확인하기 전에 큐가 빈 경우
             if(queue.size() == 0){
                 cycle = true;
                 break;
             }
             // 위상 정렬 결과가 여러개인 경우 발생
+            // 즉, 순위가 불분명한 경우
             if(queue.size() >= 2){
                 certain = false;
                 break;
