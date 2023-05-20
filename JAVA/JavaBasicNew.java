@@ -29,6 +29,7 @@ public class JavaBasicNew {
         // (형변환) char -> int
         char c1 = '1';
         int new_int1 = (int)c1 - 48;
+        int new_int2 = Character.getNumericValue(c1); // 문자형 숫자를 숫자로
 
         // (형변환) String -> char[]
         String result10 = "abc";
@@ -114,6 +115,9 @@ public class JavaBasicNew {
 
         // (정적 리스트) 2차원 채우기
         // Arrays.fill + for문
+
+        // (정적 리스트) 복사 (대상, 길이)
+        Boolean[] new_used = Arrays.copyOf(used, 2*used.length);
 
 
 
@@ -253,6 +257,7 @@ public class JavaBasicNew {
         List<Integer> now_check = new ArrayList<Integer>(check3);
 
         // (동적 리스트) 인접 리스트
+        // 인접 행렬은 보통 정적 처리
         int n = 1;
         int[][] wires = {};
         List<List<Integer>> connected = new ArrayList<>();
@@ -260,6 +265,7 @@ public class JavaBasicNew {
             List<Integer> now1 = new ArrayList<>();
             connected.add(now1);
         }
+
         for(int[] wire : wires){
             connected.get(wire[0]).add(wire[1]);
         }
