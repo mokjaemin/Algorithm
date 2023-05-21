@@ -90,8 +90,6 @@ public class JavaBasicNew {
 
         // (정적 리스트) 2. 정렬
         Arrays.sort(check);
-        // 내림차순은 for문 사용
-        Collections.reverse(Arrays.asList(check));
         
         // (정적 리스트) 3. 값 포함 여부
         // for문 사용
