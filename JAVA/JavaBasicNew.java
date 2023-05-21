@@ -88,14 +88,16 @@ public class JavaBasicNew {
         String[] check_String = new String[10];
         char[] check_char = new char[10];
 
-        // (정적 리스트) 2. 정렬, 내림차순은 for문 사용
+        // (정적 리스트) 2. 정렬
         Arrays.sort(check);
+        // 내림차순은 for문 사용
+        Collections.reverse(Arrays.asList(check));
         
         // (정적 리스트) 3. 값 포함 여부
         // for문 사용
 
         // (정적 리스트) 4. 뒤집기
-        // temp 사용
+        Collections.reverse(Arrays.asList(check));
 
         // (정적 리스트) 5. 길이
         System.out.println(check_String.length);
@@ -118,6 +120,8 @@ public class JavaBasicNew {
 
         // (정적 리스트) 복사 (대상, 길이)
         Boolean[] new_used = Arrays.copyOf(used, 2*used.length);
+
+
 
 
 
