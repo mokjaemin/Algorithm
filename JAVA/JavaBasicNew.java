@@ -198,11 +198,11 @@ public class JavaBasicNew {
         List<String> check1 = new ArrayList<>();
         List<Character> check1_char = new ArrayList<>();
 
-        // (동적 리스트) 1. Stirng 리스트를 동적리스트로 변환
+        // (동적 리스트) 정적 리스트를 동적리스트로 변환
         String[] check2_String = {"a", "b"};
         List<String> check2 = Arrays.asList(check2_String);
 
-        // (동적 리스트) 1. Integer 리스트를 동적리스트로 변환
+        // (동적 리스트) 정적 리스트를 동적리스트로 변환
         int[] check3_int = {1, 2, 3, 4};
         List<Integer> check3 = new ArrayList<>();
         for (int i : check3_int){
