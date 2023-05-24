@@ -5,8 +5,12 @@ import java.lang.Math;
 
 public class JavaBasicNew {
 
+
+
     // (클래스의 전역 변수)
-    private static int resultAll1 = 0;
+    // private static int resultAll1 = 0;
+
+
 
 
     public int[] solution(int[] num_list) {
