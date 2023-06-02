@@ -226,6 +226,7 @@ public class JavaBasicNew {
         // (동적 리스트) 2. 정렬, 역정렬
         Collections.sort(check3);
         Collections.sort(check3, Collections.reverseOrder());
+        Collections.sort(now, Comparator.comparing(arr -> arr.get(1)));
 
         // (동적 리스트) 3. 특정 값 포한 여부
         check3.contains(1);
