@@ -2,13 +2,14 @@ package JAVA;
 
 import java.util.*;
 import java.lang.Math;
+import java.util.stream.Collectors; //프로그래머스에서 Stream 사용시
 
 public class JavaBasicNew {
 
 
 
     // (클래스의 전역 변수)
-    private static int resultAll1 = 0;
+    // private static int resultAll1 = 0;
 
 
 
