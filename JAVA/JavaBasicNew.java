@@ -130,6 +130,9 @@ public class JavaBasicNew {
         // (정적 리스트) 복사 (대상, 길이)
         Boolean[] new_used = Arrays.copyOf(used, 2*used.length);
 
+        // 슬라이싱
+        int[] subArray = Arrays.copyOfRange(check, 1, 4);
+
 
 
 
