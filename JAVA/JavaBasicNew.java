@@ -62,6 +62,10 @@ public class JavaBasicNew {
         }
         String str = sb.toString();
 
+        // (형변환) Double -> Integer
+        Double doubleValue = 0.98;
+        Integer result = doubleValue.intValue();
+
 
         
         // 10진수를 다른 진수로 변환
