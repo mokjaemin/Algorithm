@@ -169,7 +169,7 @@ public class JavaBasicNew {
         
         // (문자열) 대체, 삭제
         String my_string = "abcde";
-        String result = my_string.replace(String.valueOf("a"), "");
+        String result2 = my_string.replace(String.valueOf("a"), "");
         String result1 = my_string.replace(String.valueOf("aeuoi"), "");
         
         // (문자열) 문자열에 char 추가
@@ -197,7 +197,7 @@ public class JavaBasicNew {
 
         // (문자) 해당 문자가 알파벳인지
         char c = 'a';
-        boolean result2 = Character.isLetter(c);
+        boolean result24 = Character.isLetter(c);
 
         // (문자열) 문자열의 특정 문자가 대문자인지 판단 및 변환
         Character.isUpperCase(my_string.charAt(0));
