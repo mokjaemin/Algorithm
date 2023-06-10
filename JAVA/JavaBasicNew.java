@@ -300,6 +300,9 @@ public class JavaBasicNew {
             connected.get(wire[0]).add(wire[1]);
         }
 
+        // (동적 리스트) 변경
+        check3.set(0, 1);
+
 
 
 
