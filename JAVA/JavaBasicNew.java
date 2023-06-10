@@ -183,7 +183,13 @@ public class JavaBasicNew {
         // (문자열) 4. 뒤집기(String - Char - String), 삽입
         StringBuffer sb1 = new StringBuffer(my_string);
         String reversed1 = sb.reverse().toString();
+        // 메서드
         sb.append('a');
+        sb.insert(0, 'a');
+        sb.length();
+        sb.reverse();
+        sb.toString();
+
 
         // (문자열) 5. 길이
         String a = "abc";
