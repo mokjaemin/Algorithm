@@ -211,6 +211,8 @@ public class JavaBasicNew {
         Character.isLowerCase(my_string.charAt(0));
         Character.toLowerCase('c');
         
+        // (문자) 해당 문자가 숫자인지 확인
+        Character.isDigit('1');
 
 
 
