@@ -205,14 +205,21 @@ public class JavaBasicNew {
         char c = 'a';
         boolean result24 = Character.isLetter(c);
 
-        // (문자열) 문자열의 특정 문자가 대문자인지 판단 및 변환
+        // (문자) 해당 문자가 숫자인지 확인
+        Character.isDigit('1');
+
+        // (문자) 대소문자 변환
         Character.isUpperCase(my_string.charAt(0));
         Character.toUpperCase('c');
         Character.isLowerCase(my_string.charAt(0));
         Character.toLowerCase('c');
+
+        // (문자열) 대소문자 변환
+        String test10 = "AB";
+        test10.toLowerCase();
+        test10.toUpperCase();
         
-        // (문자) 해당 문자가 숫자인지 확인
-        Character.isDigit('1');
+    
 
 
 
