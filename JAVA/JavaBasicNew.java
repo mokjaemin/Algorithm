@@ -217,7 +217,7 @@ public class JavaBasicNew {
         // (문자열) 대소문자 변환
         String test10 = "AB";
         test10.toLowerCase();
-        // test10.toUpperCase();
+        test10.toUpperCase();
         
     
 
