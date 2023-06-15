@@ -72,6 +72,10 @@ public class JavaBasicNew {
         String binaryString = Integer.toBinaryString(5); //2진수
         String octalString = Integer.toOctalString(5); //8진수
         String hexString = Integer.toHexString(5); // 16진수
+        
+        // 다시 10진수로 변환
+        int new_binary1 = Integer.parseInt(binaryString, 2);
+        long new_binary2 = Long.parseLong(binaryString, 2);
 
 
 
