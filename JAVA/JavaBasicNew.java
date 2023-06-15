@@ -71,7 +71,7 @@ public class JavaBasicNew {
         // 10진수를 다른 진수로 변환
         String binaryString = Integer.toBinaryString(5); //2진수
         String octalString = Integer.toOctalString(5); //8진수
-        String hexString = Integer.toHexString(5); // 16진수
+        // String hexString = Integer.toHexString(5); // 16진수
 
 
 
