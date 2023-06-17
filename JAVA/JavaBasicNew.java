@@ -75,7 +75,7 @@ public class JavaBasicNew {
         
         // 다시 10진수로 변환
         int new_binary1 = Integer.parseInt(binaryString, 2);
-        long new_binary2 = Long.parseLong(binaryString, 2);
+        // long new_binary2 = Long.parseLong(binaryString, 2);
 
 
 
