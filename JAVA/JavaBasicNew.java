@@ -98,6 +98,9 @@ public class JavaBasicNew {
         int speed = 10;
         System.out.println(Math.ceil(left/(double)speed));
 
+        // 절대값
+        Math.abs(1-2);
+
 
 
 
