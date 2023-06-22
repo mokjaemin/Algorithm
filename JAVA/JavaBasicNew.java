@@ -323,7 +323,7 @@ public class JavaBasicNew {
 
 
         // (해시) 키-값 설정
-        // Map<String, Integer> map1 = new HashMap<String, Integer>();
+        Map<String, Integer> map1 = new HashMap<String, Integer>();
         map1.put("a", 1);
         map1.get("a");
 
