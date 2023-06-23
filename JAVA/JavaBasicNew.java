@@ -1,8 +1,11 @@
 package JAVA;
 
 import java.util.*;
+import java.util.function.Supplier;
 import java.lang.Math;
 import java.util.stream.Collectors; //프로그래머스에서 Stream 사용시
+
+import javax.naming.LinkException;
 
 public class JavaBasicNew {
 
@@ -15,6 +18,10 @@ public class JavaBasicNew {
 
 
     public int[] solution(int[] num_list) {
+        // Supplier<String> dictinary = () -> "Hello World";
+
+
+
         int[] answer = {};
 
         // (무한대)
