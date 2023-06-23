@@ -18,7 +18,7 @@ public class JavaBasicNew {
 
 
     public int[] solution(int[] num_list) {
-        // Supplier<String> dictinary = () -> "Hello World";
+        Supplier<String> dictinary = () -> "Hello World";
 
 
 
