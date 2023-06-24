@@ -22,7 +22,7 @@ public class JavaBasicNew {
 
 
 
-        // int[] answer = {};
+        int[] answer = {};
 
         // (무한대)
         int inf1 = (int)1e9;
