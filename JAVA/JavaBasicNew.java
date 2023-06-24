@@ -355,7 +355,7 @@ public class JavaBasicNew {
         minHeap.add(1); // 추가
         minHeap.peek(); // 최솟값 출력
         minHeap.poll(); // 최솟값 제거
-        minHeap.remove(1);
+        // minHeap.remove(1);
 
 
         // 우선순위 큐 (최대힙)
