@@ -159,6 +159,7 @@ public class JavaBasicNew {
         // (문자열) 1. 생성, 분리
         String str1 = "Hello World";
         String[] arrOfStr = str.split(" ");
+        String[] arrOfStr1 = str.split("\\.");
 
         // (문자열) 2. 정렬
         char[] s = str.toCharArray();
@@ -258,6 +259,19 @@ public class JavaBasicNew {
         // (동적리스트) 삽입
         List<List<Integer>> now = new ArrayList<>();
         now.add(Arrays.asList(1, 2));
+
+
+        // (동적 리스트) 포함 여부
+        List<Integer> test1 = new ArrayList<>();
+        test1.add(1);
+        test1.add(2);
+        List<Integer> test2 = new ArrayList<>();
+        test2.add(1);
+        test2.add(2);
+        test2.add(3);
+        if(test2.containsAll(test1)){
+            System.out.println("포함");
+        }
 
 
         // (동적 리스트) 2. 정렬, 역정렬
