@@ -266,7 +266,7 @@ public class JavaBasicNew {
         test1.add(1);
         // test1.add(2);
         List<Integer> test2 = new ArrayList<>();
-        test2.add(1);
+        // test2.add(1);
         test2.add(2);
         // test2.add(3);
         if(test2.containsAll(test1)){
