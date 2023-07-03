@@ -380,6 +380,16 @@ public class JavaBasicNew {
         maxHeap.remove(1);
 
 
+        // 큐
+        Queue<Integer> check10 = new LinkedList<>();
+        check10.poll();
+        // check10.peek();
+
+        // 스택
+        Stack<Integer> check11 = new Stack<>();
+        check11.pop();
+        check11.peek();
+
         return answer;
     }
 
