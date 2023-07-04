@@ -383,7 +383,7 @@ public class JavaBasicNew {
         // 큐
         Queue<Integer> check10 = new LinkedList<>();
         check10.poll();
-        // check10.peek();
+        check10.peek();
 
         // 스택
         Stack<Integer> check11 = new Stack<>();
