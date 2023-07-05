@@ -203,7 +203,7 @@ public class JavaBasicNew {
         sb.insert(0, 'a');
         sb.length();
         sb.reverse();
-        sb.toString();
+        // sb.toString();
 
 
         // (문자열) 5. 길이
