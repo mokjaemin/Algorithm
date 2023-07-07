@@ -92,7 +92,7 @@ public class JavaBasicNew {
 
         // (Math) 최대값, 최솟값
         Math.min(1, 0);
-        // Math.max(1, 0);
+        Math.max(1, 0);
 
         // (Math) 올림, 내림, 반올림
         Math.ceil(3.1);
