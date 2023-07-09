@@ -42,7 +42,7 @@ public class JavaBasicNew {
         char c1 = '1';
         char testA = 65; // A
         int new_int1 = (int)c1 - 48;
-        // int new_int2 = Character.getNumericValue(c1); // 문자형 숫자를 숫자로
+        int new_int2 = Character.getNumericValue(c1); // 문자형 숫자를 숫자로
 
         // (형변환) String -> char[]
         String result10 = "abc";
