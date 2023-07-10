@@ -46,7 +46,7 @@ public class JavaBasicNew {
 
         // (형변환) String -> char[]
         String result10 = "abc";
-        // char[] result10_char = result10.toCharArray();
+        char[] result10_char = result10.toCharArray();
 
         // (형변환) char[] -> String
         char[] c2 = {'a', 'b', 'c'};
