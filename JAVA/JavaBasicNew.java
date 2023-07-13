@@ -103,7 +103,7 @@ public class JavaBasicNew {
         // (int)/(int) 인 경우, 분모가 (double)이여야 소수점까지 구해줌
         int left = 10;
         int speed = 10;
-        // System.out.println(Math.ceil(left/(double)speed));
+        System.out.println(Math.ceil(left/(double)speed));
 
         // 절대값
         Math.abs(1-2);
