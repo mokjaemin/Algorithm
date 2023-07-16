@@ -233,6 +233,9 @@ public class JavaBasicNew {
         String test10 = "AB";
         test10.toLowerCase();
         test10.toUpperCase();
+
+        // (문자열) 사전 비교, 음수-왼쪽 큼, 양수-오른쪽 큼
+        int comparignTo = test10.compareTo(my_string);
         
     
 
