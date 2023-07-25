@@ -273,7 +273,7 @@ public class JavaBasicNew {
         test2.add(2);
         test2.add(3);
         if(test2.containsAll(test1)){
-            System.out.println("포함");
+            // System.out.println("포함");
         }
 
 
