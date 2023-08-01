@@ -286,7 +286,7 @@ public class JavaBasicNew {
                         .thenComparing(list -> list.get(0)));
 
         // (동적 리스트) 3. 특정 값 포한 여부
-        check3.contains(1);
+        // check3.contains(1);
 
         // (동적 리스트) 4. List 뒤집기
         Collections.reverse(check3);
