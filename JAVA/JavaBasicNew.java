@@ -127,7 +127,7 @@ public class JavaBasicNew {
         Collections.reverse(Arrays.asList(check));
 
         // (정적 리스트) 5. 길이
-        // System.out.println(check_String.length);
+        System.out.println(check_String.length);
 
         // (정적 리스트) 6. 인덱스 삭제
         // for 문 이용
