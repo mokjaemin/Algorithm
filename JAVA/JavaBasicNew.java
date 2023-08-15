@@ -88,7 +88,7 @@ public class JavaBasicNew {
 
 
         // (Math) 제곱
-        // Math.pow(2, 3); // 2의 3승
+        Math.pow(2, 3); // 2의 3승
 
         // (Math) 최대값, 최솟값
         Math.min(1, 0);
