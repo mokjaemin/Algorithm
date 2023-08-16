@@ -3,54 +3,54 @@ package JAVA.TCT.DFSBFS;
 import java.util.*;
 
 public class Q1 {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String info = scanner.nextLine();
-        String[] new_info = info.split(" ");
-        int n = Integer.valueOf(new_info[0]);
-        int m = Integer.valueOf(new_info[1]);
-        int k = Integer.valueOf(new_info[2]);
-        int x = Integer.valueOf(new_info[3]);
+        Scanner sc = new Scanner(System.in);
+
+        // 입력 받는 방식 수정
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int k = sc.nextInt();
+        int x = sc.nextInt();
+
         List<List<Integer>> map = new ArrayList<>();
-        for(int i=0; i<=n; i++){
-            map.add(new ArrayList<>());
+        int[] distance = new int[n+1];
+        for (int i=0; i<=n; i++) {
+            map.add(new ArrayList<Integer>());
+            distance[i] = -1;
         }
-        for(int i=0; i<m; i++){
-            String now = scanner.nextLine();
-            int from = (int)(now.charAt(0)-48);
-            int to = (int)(now.charAt(2)-48);
+
+        for (int i=0; i<m; i++) {
+            int from = sc.nextInt();
+            int to = sc.nextInt();
             map.get(from).add(to);
         }
-        int[] distance = new int[n+1];
-        Arrays.fill(distance, (int)1e9);
-        PriorityQueue<List<Integer>> queue = new PriorityQueue<>(Comparator.comparing(arr -> arr.get(0)));
-        queue.add(Arrays.asList(0, x));
-        while(queue.size()>0){
-            List<Integer> now = queue.poll();
-            int cost = now.get(0);
-            int node = now.get(1);
-            if(cost >= distance[node]){
-                continue;
-            }
-            distance[node] = cost;
-            for(int next : map.get(node)){
-                queue.add(Arrays.asList(cost+1, next));
-            }
-        }
-        List<Integer> answer = new ArrayList<>();
-        for(int i=0; i<=n; i++){
-            if(distance[i] == k){
-                answer.add(i);
+
+        distance[x] = 0;
+        // 수정 부분, 기존 - List<Integer>와 remove 시간복잡도가 떨어진다.
+        // PriorityQueue, 무한처리 후 최단거리 왜 안되는지 -> 단방향이기 때문에?
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(x);
+        while (queue.size() > 0) {
+            int now = queue.poll();
+            for(int next : map.get(now)){
+                if (distance[next] == -1) {
+                    distance[next] = distance[now]+1;
+                    queue.add(next);
+                }
             }
         }
-        if(answer.size() == 0){
-            System.out.println(-1);
-        }
-        else{
-            Collections.sort(answer);
-            for(int i : answer){
+
+        boolean check = false;
+        for (int i = 1; i <= n; i++) {
+            if (distance[i] == k) {
                 System.out.println(i);
+                check = true;
             }
+        }
+
+        if (!check){
+             System.out.println(-1);   
         }
     }
 }
