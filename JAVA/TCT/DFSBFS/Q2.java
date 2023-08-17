@@ -2,6 +2,7 @@ package JAVA.TCT.DFSBFS;
 
 import java.util.*;
 
+// 연구소
 public class Q2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

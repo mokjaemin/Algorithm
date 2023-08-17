@@ -347,20 +347,20 @@ public class JavaBasicNew {
 
 
         // (해시) 키-값 설정
-        Map<String, Integer> map1 = new HashMap<String, Integer>();
-        map1.put("a", 1);
-        map1.get("a");
+        // Map<String, Integer> map1 = new HashMap<String, Integer>();
+        // map1.put("a", 1);
+        // map1.get("a");
 
         // (해시) 키 불러오기
-        Set<String> keys = map1.keySet();
+        // Set<String> keys = map1.keySet();
 
-        // (해시) 해당 키가 있는지 여부
-        map1.containsKey("a");
+        // // (해시) 해당 키가 있는지 여부
+        // map1.containsKey("a");
 
-        // (해시) 특정 리스트에서 해시를 이용해 해당 키의 수 세기
-        for(String s2 : check2){
-            map1.put(s2, map1.getOrDefault(s, 0)+1);
-        }
+        // // (해시) 특정 리스트에서 해시를 이용해 해당 키의 수 세기
+        // for(String s2 : check2){
+        //     map1.put(s2, map1.getOrDefault(s, 0)+1);
+        // }
 
 
 
