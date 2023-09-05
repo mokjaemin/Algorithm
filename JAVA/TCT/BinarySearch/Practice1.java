@@ -2,6 +2,7 @@ package JAVA.TCT.BinarySearch;
 
 import java.util.*;
 
+// 부품 확인
 public class Practice1 {
     public static List<Integer> values = new ArrayList<>();
     public static void main(String[] args) {
