@@ -7,7 +7,7 @@ import java.util.stream.Collectors; //프로그래머스에서 Stream 사용시
 
 import javax.naming.LinkException;
 
-public class JavaBasicNew {
+public class JavaBasicGrammar {
 
 
 
