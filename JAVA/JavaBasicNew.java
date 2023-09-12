@@ -183,10 +183,10 @@ public class JavaBasicNew {
         String b = "abc";
         b.equals(b);
         
-        // (문자열) 대체, 삭제
+        // (문자열) 전체 대체, 삭제
         String my_string = "abcde";
-        String result2 = my_string.replace(String.valueOf("a"), "");
-        String result1 = my_string.replace(String.valueOf("aeuoi"), "");
+        String result2 = my_string.replace("a", "");
+        String result1 = my_string.replace("aeiou", "");
         
         // (문자열) 문자열에 char 추가
         String check4 = "";
