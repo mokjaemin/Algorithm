@@ -2,6 +2,7 @@ package JAVA.TCT.GraphTheory;
 
 import java.util.*;
 
+// 여행 계획
 public class Q1 {
     public static int[] parent;
     public static void main(String[] args){
