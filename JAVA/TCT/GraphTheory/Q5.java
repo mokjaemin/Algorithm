@@ -6,6 +6,7 @@ import java.util.*;
 // 최종 순위
 public class Q5 {
     public static void main(String[] args){
+
         Scanner sc = new Scanner(System.in);
         // 반복 횟수
         int t = sc.nextInt();
