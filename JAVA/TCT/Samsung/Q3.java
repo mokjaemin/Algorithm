@@ -73,8 +73,6 @@ public class Q3 {
 
 
 
-
-
         int time = 0;
         while(true){
             // 시간이 1000초가 늘어나면 종료
