@@ -3,7 +3,7 @@ package SofteerPractice;
 
 import java.util.*;
 
-// 5. 사물인식 최소면적 산출 프로그램
+// 5. 사물인식 최소면적 산출 프로그램 - 해결 못함
 public class Practice5 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);

@@ -2,7 +2,7 @@ package SofteerPractice;
 
 import java.util.*;
 
-// 4. Garage Game
+// 4. Garage Game - 구현, DFS, BFS
 public class Practice4 {
     public static int answer = 0;
     public static int n;
@@ -19,7 +19,7 @@ public class Practice4 {
                 map[i][j] = sc.nextInt();
             }
         }
-        // 로직 - BFS/DFS 완전탐색 가능 (1000만)
+        // 로직 - BFS/DFS
         // 1. 카고에서 한칸 선택
         // 2. 점수 구하기
         // 3. 맵 갱신

@@ -3,7 +3,7 @@ package SofteerPractice;
 
 import java.util.*;
 
-// 3. 강의실 배정
+// 3. 강의실 배정 - 정렬
 public class Practice3 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -16,7 +16,7 @@ public class Practice3 {
             int end = sc.nextInt();
             times.add(Arrays.asList(start, end));
         }
-        // 10억
+        // 시간복잡도 : 1600만
         Collections.sort(times, Comparator.comparing(arr -> arr.get(0)));
         int end = times.get(0).get(1);
         int answer = 1;

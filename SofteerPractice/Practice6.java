@@ -2,7 +2,7 @@ package SofteerPractice;
 
 import java.util.*;
 
-// 6. 지우는 소수를 좋아해 - 그래프 이론 (크루스칼 알고리즘)
+// 6. 지우는 소수를 좋아해 - 크루스칼 알고리즘
 public class Practice6 {
     public static int[] parent;
     public static void main(String[] args){

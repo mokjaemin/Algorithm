@@ -17,10 +17,12 @@ public class Practice1 {
             int value = sc.nextInt();
             values.add(value);
         }
+        // 정렬 시간복잡도 N*logN
         Collections.sort(values);
         List<Integer> answer = new ArrayList<>();
         for(int i=0; i<q; i++){
             int mid = sc.nextInt();
+            // 이진탐색으로 위치 찾기
             int pos = binary_search(mid);
             if(pos == -1){
                 answer.add(0);
@@ -34,8 +36,9 @@ public class Practice1 {
         }
     }
     public static int binary_search(int mid){
+        // 위치 0과 마지막 위치는 중간값이 될 수 없다
         int start = 1;
-        int end = values.size()-1;
+        int end = values.size()-2;
         while(start <= end){
             int now = (start + end)/2;
             if(values.get(now) > mid){
