@@ -3,7 +3,7 @@ package SofteerPractice;
 
 import java.util.*;
 
-// 1. 자동차 테스트
+// 1. 자동차 테스트 - 이진탐색
 public class Practice1 {
     public static List<Integer> values = new ArrayList<>();
     public static void main(String[] args){
