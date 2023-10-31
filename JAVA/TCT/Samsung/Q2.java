@@ -104,6 +104,16 @@ public class Q2 {
             // 결과 갱신
             answer = Math.max(answer, result);
 
+            System.out.println(result);
+            for(int a=0; a<4; a++){
+                for(int j=0; j<4; j++){
+                    System.out.print(size_map[a][j]);
+                    System.out.print(" ");
+                }
+                System.out.println(" ");
+            }
+            System.out.println(" ");
+
 
             // 다시 이동
             fish_move();
