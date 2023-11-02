@@ -1,4 +1,4 @@
-package BackJoonDfsBfs;
+package BackJoon_DFSBFS;
 
 
 import java.util.*;
