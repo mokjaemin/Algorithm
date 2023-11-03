@@ -3,6 +3,7 @@ package BAEKJOON_RANDOM;
 import java.util.*;
 
 // 단어 공부
+// -- Integer 비교도 equals 사용하자
 public class Q5 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);

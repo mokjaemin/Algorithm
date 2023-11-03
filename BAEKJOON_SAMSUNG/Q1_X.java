@@ -4,7 +4,7 @@ package BAEKJOON_SAMSUNG;
 import java.util.*;
 
 // 구슬 탈출 2
-public class Q1 {
+public class Q1_X {
     public static boolean[][] visitedRed;
     public static boolean[][] visitedBlue;
     public static int[] dx = {-1, 0, 1, 0};
