@@ -4,14 +4,15 @@ import java.util.*;
 
 public class LCSTEST {
     public static int[][] LCS;
-    public static String X = "GBCDFE";
-    public static String Y = "ABCDEF";
+    public static String X;
+    public static String Y;
     public static int n;
     public static int m;
+    public static String result;
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println(X);
-        System.out.println(Y);
+        X = sc.next();
+        Y = sc.next();
         n = X.length();
         m = Y.length();
         LCS = new int[n+1][m+1];
@@ -28,10 +29,16 @@ public class LCSTEST {
             }
         }
         dfs(new ArrayList<>(), n, m);
+        System.out.println(LCS[n][m]);
+        System.out.println(result);
     }
     public static void dfs(List<Character> list, int x, int y){
         if(list.size() == LCS[n][m]){
-            System.out.println(list);
+            StringBuilder sb = new StringBuilder();
+            for(int j=list.size()-1; j>=0; j--){
+                sb.append(list.get(j));
+            }
+            result = sb.toString();
             return;
         }
         if(x-1 < 0 | y-1 < 0){
