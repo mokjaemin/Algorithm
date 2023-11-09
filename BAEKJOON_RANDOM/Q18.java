@@ -18,5 +18,12 @@ public class Q18 {
             list.add(value);
         }
         System.out.println(list.peek());
+        Set<Integer> set = new TreeSet<>(Comparator.comparing(arr -> -arr));
+        for(int i=1; i<=10; i++){
+            set.add(i);
+        }
+        for(int i : set){
+            System.out.println(i);
+        }
     }
 }
