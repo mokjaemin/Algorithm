@@ -67,9 +67,6 @@ public class LCSTEST {
             }
             System.out.println("");
         }
-//        dfs(new ArrayList<>(), n, m);
-//        System.out.println(LCS[n][m]);
-//        System.out.println(result);
     }
 //    public static void dfs(List<Character> list, int x, int y){
 //        if(list.size() == LCS[n][m]){
