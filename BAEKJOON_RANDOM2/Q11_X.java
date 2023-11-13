@@ -44,64 +44,19 @@ public class Q11_X {
             // L, D, B
             if(now.length() == 1){
                 if(now.equals("L")){
-                    if(cursor.left == null){
-                        continue;
-                    }
-                    cursor.right = cursor.left;
-                    cursor.left = cursor.left.left;
+
                 }
                 if(now.equals("D")){
-                    if(cursor.right == null){
-                        continue;
-                    }
-                    cursor.left = cursor.right;
-                    cursor.right = cursor.right.right;
+
                 }
                 if(now.equals("B")){
-                    if(cursor.left == null){
-                        continue;
-                    }
-                    if(cursor.right != null){
-                        cursor.right.left = cursor.left.left;
-                    }
-                    cursor.left.dead = true;
-                    if(cursor.left.left != null){
-                        cursor.left.left = cursor.right;
-                    }
-                    cursor.left = cursor.left.left;
+
                 }
             }
             // P
             else{
-                char next = now.split(" ")[1].charAt(0);
-                Node new_node = new Node(cursor.left, cursor.right, next);
-                list.add(new_node);
-                if(cursor.left != null){
-                    cursor.left.right = new_node;
-                }
-                if(cursor.right != null){
-                    cursor.right.left = new_node;
-                }
-                cursor.left = new_node;
+
             }
-            StringBuilder sb = new StringBuilder();
-            for(Node next : list){
-                if(next.left == null){
-                    if(next.dead){
-                        continue;
-                    }
-                    sb.append(next.value);
-                    while(next.right != null){
-                        next = next.right;
-                        if(next.dead){
-                            continue;
-                        }
-                        sb.append(next.value);
-                    }
-                    break;
-                }
-            }
-            System.out.println(sb.toString());
         }
     }
 }
