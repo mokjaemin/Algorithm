@@ -33,6 +33,7 @@ public class Q2 {
             if(stack.isEmpty()){
                 System.out.print(0 + " ");
             }
+
             stack.push(new Tower(height, i+1));
         }
     }
