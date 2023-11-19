@@ -20,7 +20,6 @@ public class Q5 {
         long right_result = 0;
         for(int i=0; i<n; i++){
             long now = list.get(i);
-
             int left = i+1;
             int right = n-1;
             while(left <= right){
