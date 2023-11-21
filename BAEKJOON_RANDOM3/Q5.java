@@ -18,7 +18,6 @@ public class Q5 {
         long min_value = Long.MAX_VALUE;
         long left_result = 0;
         long right_result = 0;
-
         for(int i=0; i<n; i++){
             long now = list.get(i);
             int left = i+1;
