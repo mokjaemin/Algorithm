@@ -37,6 +37,7 @@ public class LCSTEST {
                             value = Math.max(value, LCS[i-1][j-1][0]+1);
                         }
                     }
+
                     if(LCS[i-1][j][1] == 0){
                         if(LCS[i-1][j][0]+1 <= i && LCS[i-1][j][0]+1 <= j){
                             value = Math.max(value, LCS[i-1][j][0]+1);
