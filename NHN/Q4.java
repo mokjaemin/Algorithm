@@ -1,8 +1,9 @@
-package BAEKJOON_RANDOM3;
+package NHN;
 
 import java.util.*;
 
-public class Q6 {
+// NHN 문제 4
+public class Q4 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
